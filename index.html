@@ -1,0 +1,241 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NITCAA Qatar Home Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <meta name="keywords" content="Calicut, NITC, National Institute of Technology, Alumni, Alma-mater"/>
+    <meta name="description" content="NIT Calicut Alumni - A portal for alumni to connect"/>
+    <link rel="stylesheet" href="css/default.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <script type="text/javascript" src="js-slide/jquery.js"></script>
+    <script type="text/javascript" src="js-slide/show.js"></script>
+    <script type="text/javascript" src="js-slide/initslider-1.js"></script>
+    
+<script type="text/javascript">
+$(document).ready(function(){
+    var width = $(".inner").width();
+        width = width - 36;
+    $("#imgSetting").click(function(){ 
+        $(".inner").stop().animate({left:0},1000);         
+        $("#imgSetting").css("visibility", "hidden");
+        $("#imgSearch").css("visibility", "hidden");
+    });
+    
+    $("#imgSettingClose").click(function(){
+        $(".inner").stop().animate({left:-width},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });     
+    
+    var widthSearch = $(".innerSearch").width();
+        widthSearch = widthSearch - 46;
+    $("#imgSearch").click(function(){ 
+        $(".innerSearch").stop().animate({left:0},1000); 
+        $("#imgSearch").css("visibility", "hidden");
+        $("#imgSetting").css("visibility", "hidden");
+    }); 
+    
+    $("#imgSearchClose").click(function(){
+        $(".innerSearch").stop().animate({left:-widthSearch},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });       
+       
+});
+</script>
+<style type="text/css">
+
+.wrapperSearch{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:220px;
+    height:200px;
+    z-index:10001;
+}
+.innerSearch{
+    width:430px;
+    height:200px;
+    position:relative;
+    left: -384px;
+    z-index:1;
+    color:white;
+}
+
+.wrapper{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:346px;
+    height:200px;
+    z-index:10001;
+}
+
+.inner{
+    width:250px;
+    height:200px;
+    position:relative;
+    left: -214px;
+    z-index:1;
+    color:white;
+}
+</style>    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 10%">
+                    <img src="images/logo.jpg" alt="NITC Alumni"/></td>
+                <td style="width: 72%">
+                    <h1 class="entry-title">
+                        NITC Alumni Association Qatar Chapter</h1>
+                </td>
+                <td style="width: 4%;padding-right:15px;">
+                    &nbsp;
+                </td>                
+                <td style="width: 7%">&nbsp;
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 84%">
+                    <div id="main">
+                        <div id="wrapper" class="foreground">
+                            <div id="nav">
+                                <ul class="menu">
+                                    <li class="item2"><a href="."><span>Home</span></a></li>
+                                    <li class="item32"><a href="aboutus.aspx"><span>About Us</span></a></li>
+                                    <li class="item32"><a href="News.aspx"><span>News</span></a></li>
+                                    <li class="item32"><a href="IccAffliation.html"><span>ICC Affiliation</span></a></li>                                    
+                                    <li class="item6"><a href="Members.aspx"><span>Members</span></a></li>
+                                    <li class="item6"><a href="officials.aspx"><span>Office Bearers</span></a></li>                                    
+                                    <li class="item32"><a href="contactus.aspx"><span>Contact Us</span></a></li>
+                                    <li class="item32" id="adminLink" runat="server" style="display:none"><a href="admin/AdminHome.aspx"><span>Admin</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="width: 7%">
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 84%">
+
+
+
+<!-- -->
+<table width="100%" style="line-height:25px">
+<tr>
+<td style="vertical-align:top">
+<p>
+&nbsp;&nbsp;&nbsp;NITCAA Qatar is the Alumni Association of the old students of National Institute of Technology, Calicut , 
+Kerala (formerly called as Regional Engineering College, Calicut) working /staying at Qatar. 
+</p>
+<br/>
+<p>
+&nbsp;&nbsp;&nbsp;NITCAA Qatar was the first of its kind, to have an alumni association in Qatar for engineering colleges in India.
+The Association was formed in the year 1983, with Alichen Thomas as the Founder President and Abdul Nazer as the Founder Secretary.
+<!--Abdul Razzaq, Raghuveeran and Kamaruddin were the founding members of the group.-->
+During the period of years, NITCAA Qatar has grown up remarkably, and is now an inevitable group among professionals in Qatar. 
+</p>
+<br/>
+<p>&nbsp;&nbsp;&nbsp;We bring together Alumnus of NIT Calicut /REC Calicut, who shares the same nostalgic memories of 
+their college days and are longing to unite with their old batch mates and friends.
+We organize Fun filled Get-togethers for the members and their families. Technical seminars and
+trainings are also conducted, which is beneficial to the members in their profession.</p>
+</td>
+<td style="width:560px;text-align:right;">
+
+<div style="margin:30px auto;max-width:550px;">
+    
+    <!-- Insert to your webpage where you want to display the slider -->
+    <div id="myshow-1" style="display:block;position:relative;margin:16px auto 56px;">
+        <ul class="myshow-slides" style="display:none;">
+            <li><img src="images-slide/image1.jpg" alt="" /></li>
+            <li><img src="images-slide/image2.jpg" alt=""/></li>
+            <li><img src="images-slide/image3.jpg" alt=""/></li>
+            <li><img src="images-slide/image4.jpg" alt=""/></li>
+			<li><img src="images-slide/image5.jpg" alt=""/></li>
+            <li><img src="images-slide/image6.jpg" alt=""/></li>
+            <li><img src="images-slide/image7.jpg" alt=""/></li>
+			<li><img src="images-slide/image8.jpg" alt=""/></li>
+			<li><img src="images-slide/image9.gif" alt=""/></li>
+			<li><img src="images-slide/image10.gif" alt=""/></li>
+			<li><img src="images-slide/image11.gif" alt=""/></li>
+			<li><img src="images-slide/image12.gif" alt=""/></li>			
+        </ul>
+        <ul class="myshow-thumbnails" style="display:none;">
+            <li><img src="images-slide/image1-tn.jpg" alt=""/></li>
+            <li><img src="images-slide/image2-tn.jpg" alt=""/></li>
+            <li><img src="images-slide/image3-tn.jpg" alt=""/></li>
+            <li><img src="images-slide/image4-tn.jpg" alt=""/></li>
+			<li><img src="images-slide/image5-tn.jpg" alt=""/></li>
+            <li><img src="images-slide/image6-tn.jpg" alt=""/></li>
+            <li><img src="images-slide/image7-tn.jpg" alt=""/></li>
+			<li><img src="images-slide/image8-tn.jpg" alt=""/></li>	
+			<li><img src="images-slide/image9-tn.gif" alt=""/></li>
+			<li><img src="images-slide/image10-tn.gif" alt=""/></li>
+			<li><img src="images-slide/image11-tn.gif" alt=""/></li>
+			<li><img src="images-slide/image12-tn.gif" alt=""/></li>						
+        </ul> 
+    </div> 
+    
+</div>
+
+
+</td></tr>
+</table>
+
+ 
+ 
+
+<!-- -->
+                    
+
+
+                    
+                </td>
+                <td style="width: 7%"></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 50px;">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                </td>
+                <td style="text-align: center">
+                    <table width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <div class="hrNormal">
+                                    </div>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:40%;text-align:right;font-size:8pt" >
+                                2017 (c) NITCAA Qatar EXECOM</td>
+                            <td style="width:60%;text-align:left;vertical-align:top;padding-left:100px;font-size:9pt">Follow Us on <a href="https://www.facebook.com/groups/612368988777637/" title="Visit NITCAA Qatar Group on Facebook"><img alt="Visit NITCAA Qatar Group on Facebook" src="images/facebook.png" border="0" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
