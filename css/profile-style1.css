@@ -1,0 +1,88 @@
+﻿body {
+	color: rgb(34, 34, 34);
+}
+button {
+	color: rgb(34, 34, 34);
+}
+input {
+	color: rgb(34, 34, 34);
+}
+select {
+	color: rgb(34, 34, 34);
+}
+textarea {
+	color: rgb(34, 34, 34);
+}
+html {
+	font-size: 16px;
+}
+
+
+html body {
+	
+font: 0.81em/1.4 Arial, "Helvetica Neue", Helvetica, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+
+
+.tdBackground{
+background: url("/web/goal/2013.11.28-v1/images/layout/bgDesktop.jpg") no-repeat 50% 380px rgb(8, 31, 44); 
+}
+ 
+#page-content {
+	margin: 0px auto; border: 0px currentColor; width: 640px; 
+}
+
+ 
+div.module {
+	font-size: 100%;
+}
+
+img {
+	vertical-align: middle;
+}
+script {
+	display: none !important;
+}
+a {
+	color: rgb(8, 31, 44); text-decoration: none;
+}
+a:link {
+	color: rgb(8, 31, 44); text-decoration: none;
+}
+a:active {
+	color: rgb(8, 31, 44); text-decoration: none;
+}
+a:hover {
+	color: rgb(8, 31, 44); text-decoration: none;
+}
+a:visited {
+	color: rgb(8, 31, 44); text-decoration: none;
+}
+
+#page-content {
+	overflow: hidden; clear: both;
+}
+ 
+#two_col_content_by_left_nav ul.playerNav {
+	background: 0px; height: 40px; padding-top: 5px;
+}
+.dir-rtl #two_col_content_by_left_nav ul.playerNav {
+	padding: 5px 0px 10px;
+}
+#two_col_content_by_left_nav ul.playerNav li {
+	background: rgb(244, 244, 244); margin: 4px 2px; padding: 0.5em 1.2em; border-radius: 3px; border: 1px solid rgb(194, 194, 194);
+}
+#two_col_content_by_left_nav ul.playerNav li.menuGray:hover {
+	background: rgb(244, 244, 244); margin: 4px 2px; padding: 0.5em 1.2em; border-radius: 3px; border: 1px solid rgb(194, 194, 194);
+}
+#two_col_content_by_left_nav ul.playerNav li.selected {
+	background: rgb(0, 8, 19); border-color: rgb(0, 8, 19); filter: none;
+}
+#two_col_content_by_left_nav ul.playerNav li:hover {
+	background: rgb(0, 8, 19); border-color: rgb(0, 8, 19); filter: none;
+}
+.dir-rtl #two_col_content_by_left_nav ul.playerNav li {
+	float: right;
+}
+ 
+ 
