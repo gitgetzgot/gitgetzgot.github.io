@@ -1,0 +1,399 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NITCAA Qatar - Office Bearers</title>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <meta name="keywords" content="Calicut, NITC, National Institute of Technology, Alumni, Alma-mater"/>
+    <meta name="description" content="NIT Calicut Alumni - A portal for alumni to connect"/>
+    <link rel="stylesheet" href="css/default.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <script type="text/javascript" src="js-slide/jquery.js"></script>
+    <script type="text/javascript" src="js-slide/show.js"></script>
+    <script type="text/javascript" src="js-slide/initslider-1.js"></script>
+    
+<script type="text/javascript">
+$(document).ready(function(){
+    var width = $(".inner").width();
+        width = width - 36;
+    $("#imgSetting").click(function(){ 
+        $(".inner").stop().animate({left:0},1000);         
+        $("#imgSetting").css("visibility", "hidden");
+        $("#imgSearch").css("visibility", "hidden");
+    });
+    
+    $("#imgSettingClose").click(function(){
+        $(".inner").stop().animate({left:-width},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });     
+    
+    var widthSearch = $(".innerSearch").width();
+        widthSearch = widthSearch - 46;
+    $("#imgSearch").click(function(){ 
+        $(".innerSearch").stop().animate({left:0},1000); 
+        $("#imgSearch").css("visibility", "hidden");
+        $("#imgSetting").css("visibility", "hidden");
+    }); 
+    
+    $("#imgSearchClose").click(function(){
+        $(".innerSearch").stop().animate({left:-widthSearch},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });       
+       
+});
+</script>
+<style type="text/css">
+
+.wrapperSearch{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:220px;
+    height:200px;
+    z-index:10001;
+}
+.innerSearch{
+    width:430px;
+    height:200px;
+    position:relative;
+    left: -384px;
+    z-index:1;
+    color:white;
+}
+
+.wrapper{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:346px;
+    height:200px;
+    z-index:10001;
+}
+
+.inner{
+    width:250px;
+    height:200px;
+    position:relative;
+    left: -214px;
+    z-index:1;
+    color:white;
+}
+</style>    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 10%">
+                    <img src="images/logo.png" alt="NITC Alumni"/></td>
+                <td style="width: 72%">
+                    <h1 class="entry-title">
+                        NITC Alumni Association Qatar Chapter</h1>
+                </td>
+                <td style="width: 4%;padding-right:15px;">
+                    &nbsp;
+                </td>                
+                <td style="width: 7%">
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 84%">
+                    <div id="main">
+                        <div id="wrapper" class="foreground">
+                            <div id="nav">
+                                <ul class="menu">
+                                    <li class="item2"><a href="."><span>Home</span></a></li>
+                                    <li class="item32"><a href="aboutus.aspx"><span>About Us</span></a></li>
+                                    <li class="item32"><a href="News.aspx"><span>News</span></a></li>
+                                    <li class="item32"><a href="IccAffliation.html"><span>ICC Affiliation</span></a></li>                                    
+                                    <li class="item6"><a href="Members.aspx"><span>Members</span></a></li>
+                                    <li class="item6"><a href="officials.aspx"><span>Office Bearers</span></a></li>                                    
+                                    <li class="item32"><a href="contactus.aspx"><span>Contact Us</span></a></li>
+                                    <li class="item32" id="adminLink" runat="server" style="display:none"><a href="admin/AdminHome.aspx"><span>Admin</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="width: 7%">
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    <asp:Panel ID="panelLeft" runat="server" Visible="false">
+                    <div class="wrapperSearch">
+                        <div class="innerSearch" id="divSearch">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="background-color:#888; color: #FFFFFF;text-align:left">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                        <tr><td style="width:30%;padding-left:4px">Name:</td><td><asp:TextBox ID="txtMemberName" Width="230px" runat="server"></asp:TextBox></td></tr>
+                                        <tr><td style="padding-left:4px">Batch:</td><td><asp:TextBox ID="txtBatch" Width="230px" runat="server"></asp:TextBox></td></tr>
+                                        <tr><td style="padding-left:4px">Branch:</td><td><asp:TextBox ID="txtBranch" Width="230px" runat="server"></asp:TextBox></td></tr>
+                                        <tr><td style="padding-left:4px">Employer:</td><td><asp:TextBox ID="txtEmployer" Width="230px" runat="server"></asp:TextBox></td></tr>
+                                        <tr><td>&nbsp;</td><td><table cellpadding="0" cellspacing="0" width="100%"><tr><td><asp:Button 
+                                        CssClass="ButtonStyle" ToolTip="Click Here to Search" id="btnSearch" CausesValidation="false" Text="Search" runat="server"/></td><td style="text-align:right"><img style="cursor:pointer" title="close" alt="close" id="imgSearchClose" src="images/closesmall.png" /></td></tr></table>
+                                        </td></tr>
+                                        </table>
+                                    </td>
+                                    <td><img style="cursor:pointer" title="Search" alt="Search" id="imgSearch" src="images/search.png" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>                
+                    <div class="wrapper">
+                        <div class="inner" id="divsettings">
+                            <table width="100%">
+                                <tr>
+                                    <td style="background-color:#888; color: #FFFFFF;text-align:left">
+                                        <ul>
+                                            <li><a href="ChangePassword.aspx" style="color:#FFFFFF">Change Password</a></li>
+                                            <li><a href="EditProfile.aspx" style="color:#FFFFFF">Edit Profile</a></li>
+                                            <li><a href="ChangePhoto.aspx" style="color:#FFFFFF">Change Picture</a></li>
+                                        </ul><div style="padding-left:182px;cursor:pointer"><img border="0" title="close" alt="close" id="imgSettingClose" src="images/closesmall.png" /></div>
+                                    </td>
+                                    <td style="vertical-align:middle" valign="middle"><img style="cursor:pointer" title="Settings" alt="Settings" id="imgSetting" src="images/setting.png" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    </asp:Panel>
+                    &nbsp;</td>
+                <td style="width: 84%">
+
+
+
+
+        <br />
+    <table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align:top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/jacob.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">President</span> <br />
+                <span class="officeName"">Jacob Nelson</span><br />
+                <span class="officeDetail"">Planning Manager<br />
+                QPM</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align:top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/manojek.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">General Secretary</span> <br />
+                <span class="officeName"">Manoj E.K</span><br />
+                <span class="officeDetail"">Planning Engineer<br />
+                KEO International</span></div></td></tr>
+                </table>
+            </td>
+        </tr>     	
+        <tr>
+            <td style="width: 50%; vertical-align:top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/sanil.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Joint Secretary</span> <br />
+                <span class="officeName"">Sanil Vellarakkad</span><br />
+                <span class="officeDetail"">Senior Architectural Engineer<br />
+                QP</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align:top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/saheer.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Treasurer</span> <br />
+                <span class="officeName"">Saheer Javad</span><br />
+                <span class="officeDetail"">Sr. Street Lighting Engineer<br />
+                ASHGAL</span></div></td></tr>
+                </table>
+            </td>
+        </tr>        
+    </table>		
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+        <td colspan="3" style="padding-left:0px"><div class="hr"> 
+        </div></td>
+        </tr>
+    </table> 
+    <table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align:top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/mujeeb.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Secretary - Sports</span> <br />
+                <span class="officeName"">Mujeeb Ahmed V</span><br />
+                <span class="officeDetail"">Sr. Structural Engineer<br />
+                QP</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align:top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/aysha.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Secretary - Cultural</span> <br />
+                <span class="officeName"">Aysha Vadakkayil</span><br />
+                <span class="officeDetail"">Planning Engineer<br />
+                Target Engineering Construction Company</span></div></td></tr>
+                </table>
+            </td>
+        </tr>        
+    </table>
+<table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align: top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/pius.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">EF Representative</span> <br />
+                <span class="officeName"">Pius Mathekkal</span><br />
+                <span class="officeDetail"">Senior HVAC Engineer<br />
+                QP</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align: top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/manojmenon.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">EF Representative</span> <br />
+                <span class="officeName"">Manoj Menon</span><br />
+                <span class="officeDetail"">Business Analyst<br />
+                IBQ</span></div></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        <td colspan="2" style="padding-left:0px"><div class="hr"> 
+        </div></td>
+        </tr>        
+    </table>
+    <table width="100%">
+        <tr>
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/yasir.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Yasir Muhyudeen Abdullah</span><br />
+                <span class="officeDetail"">Transportation Engineer<br />
+                Ministry Of Municipality & Urban Planning</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/shiju.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Shiju K.P</span><br />
+                <span class="officeDetail"">Logistcs Manager<br />
+                Jotun Paints</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 34%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/swaraj.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Swaraj Rajan</span><br />
+                <span class="officeDetail"">Senior Engineer<br />
+                Al Jaber</span></div></td></tr>
+                </table>
+            </td>
+        </tr>
+     <tr>
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/hashin.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Hashin Kabeer</span><br />
+                <span class="officeDetail"">Senior Technology Consultant<br />
+                EMC</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/kevin.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Kevin Sam</span><br />
+                <span class="officeDetail"">Senior Transport Planner<br />
+                ATKINS</span></div></td></tr>
+                </table>			
+            </td>
+            <td style="width: 34%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/anila.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Executive Member</span> <br />
+                <span class="officeName"">Anila Alichen</span><br />
+                <span class="officeDetail"">Systems Engineer<br />
+                Infosys</span></div></td></tr>
+                </table>
+            </td>
+        </tr>      
+    </table> 
+                    
+
+
+                    
+                </td>
+                <td style="width: 7%">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 50px;">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                </td>
+                <td style="text-align: center">
+                    <table width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <div class="hrNormal">
+                                    </div>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:40%;text-align:right;font-size:8pt" >
+                                2017 (c) NITCAA Qatar EXECOM</td>
+                            <td style="width:60%;text-align:left;vertical-align:top;padding-left:100px;font-size:9pt">Follow Us on <a href="https://www.facebook.com/groups/612368988777637/" title="Visit NITCAA Qatar Group on Facebook"><img alt="Visit NITCAA Qatar Group on Facebook" src="images/facebook.png" border="0" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
