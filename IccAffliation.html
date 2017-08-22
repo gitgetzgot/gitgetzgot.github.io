@@ -1,0 +1,175 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NITCAA Qatar</title>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <meta name="keywords" content="Calicut, NITC, National Institute of Technology, Alumni, Alma-mater"/>
+    <meta name="description" content="NIT Calicut Alumni - A portal for alumni to connect"/>
+    <link rel="stylesheet" href="css/default.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <script type="text/javascript" src="js-slide/jquery.js"></script>
+    <script type="text/javascript" src="js-slide/show.js"></script>
+    <script type="text/javascript" src="js-slide/initslider-1.js"></script>
+    
+<script type="text/javascript">
+$(document).ready(function(){
+    var width = $(".inner").width();
+        width = width - 36;
+    $("#imgSetting").click(function(){ 
+        $(".inner").stop().animate({left:0},1000);         
+        $("#imgSetting").css("visibility", "hidden");
+        $("#imgSearch").css("visibility", "hidden");
+    });
+    
+    $("#imgSettingClose").click(function(){
+        $(".inner").stop().animate({left:-width},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });     
+    
+    var widthSearch = $(".innerSearch").width();
+        widthSearch = widthSearch - 46;
+    $("#imgSearch").click(function(){ 
+        $(".innerSearch").stop().animate({left:0},1000); 
+        $("#imgSearch").css("visibility", "hidden");
+        $("#imgSetting").css("visibility", "hidden");
+    }); 
+    
+    $("#imgSearchClose").click(function(){
+        $(".innerSearch").stop().animate({left:-widthSearch},500);
+        $("#imgSetting").css("visibility", "visible");
+        $("#imgSearch").css("visibility", "visible");
+    });       
+       
+});
+</script>
+<style type="text/css">
+
+.wrapperSearch{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:220px;
+    height:200px;
+    z-index:10001;
+}
+.innerSearch{
+    width:430px;
+    height:200px;
+    position:relative;
+    left: -384px;
+    z-index:1;
+    color:white;
+}
+
+.wrapper{
+    position:absolute;
+    overflow:hidden;
+    color:white;
+    top:346px;
+    height:200px;
+    z-index:10001;
+}
+
+.inner{
+    width:250px;
+    height:200px;
+    position:relative;
+    left: -214px;
+    z-index:1;
+    color:white;
+}
+</style>    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 10%">
+                    <img src="images/logo.jpg" alt="NITC Alumni"/></td>
+                <td style="width: 72%">
+                    <h1 class="entry-title">
+                        NITC Alumni Association Qatar Chapter</h1>
+                </td>
+                <td style="width: 4%;padding-right:15px;">
+                    &nbsp; 
+                </td>                
+                <td style="width: 7%">
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+                    &nbsp;</td>
+                <td style="width: 84%">
+                    <div id="main">
+                        <div id="wrapper" class="foreground">
+                            <div id="nav">
+                                <ul class="menu">
+                                    <li class="item2"><a href="."><span>Home</span></a></li>
+                                    <li class="item32"><a href="aboutus.html"><span>About Us</span></a></li>
+                                    <li class="item32"><a href="News.html"><span>News</span></a></li>
+                                    <li class="item32"><a href="IccAffliated.html"><span>ICC Affiliation</span></a></li>                                    
+                                    <li class="item6"><a href="Members.html"><span>Members</span></a></li>
+                                    <li class="item6"><a href="officials.html"><span>Office Bearers</span></a></li>                                    
+                                    <li class="item32"><a href="contactus.html"><span>Contact Us</span></a></li>
+                                    <li class="item32" id="adminLink" runat="server" style="display:none"><a href="admin/AdminHome.aspx"><span>Admin</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="width: 7%">
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td style="width: 7%">
+
+                    &nbsp;</td>
+                <td style="width: 84%">
+		
+		<br>&nbsp;NITCAA Qatar is affiliated to the Indian Cultural Centre under the aegis of Embassy of India, Doha.
+		Following is the ICC affliation details. <br><br>
+		<img src="images/nitcaaICC.jpg" /> 
+
+                    
+                </td>
+                <td style="width: 7%">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 50px;">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                </td>
+                <td style="text-align: center">
+                    <table width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <div class="hrNormal">
+                                    </div>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:40%;text-align:right;font-size:8pt" >
+                                2017 (c) NITCAA Qatar EXECOM</td>
+                            <td style="width:60%;text-align:left;vertical-align:top;padding-left:100px;font-size:9pt">Follow Us on <a href="https://www.facebook.com/groups/612368988777637/" title="Visit NITCAA Qatar Group on Facebook"><img alt="Visit NITCAA Qatar Group on Facebook" src="images/facebook.png" border="0" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
