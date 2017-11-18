@@ -11,36 +11,36 @@
     <script type="text/javascript" src="js-slide/initslider-1.js"></script>
     
 <script type="text/javascript">
-$(document).ready(function(){
-    var width = $(".inner").width();
+    $(document).ready(function () {
+        var width = $(".inner").width();
         width = width - 36;
-    $("#imgSetting").click(function(){ 
-        $(".inner").stop().animate({left:0},1000);         
-        $("#imgSetting").css("visibility", "hidden");
-        $("#imgSearch").css("visibility", "hidden");
-    });
-    
-    $("#imgSettingClose").click(function(){
-        $(".inner").stop().animate({left:-width},500);
-        $("#imgSetting").css("visibility", "visible");
-        $("#imgSearch").css("visibility", "visible");
-    });     
-    
-    var widthSearch = $(".innerSearch").width();
+        $("#imgSetting").click(function () {
+            $(".inner").stop().animate({ left: 0 }, 1000);
+            $("#imgSetting").css("visibility", "hidden");
+            $("#imgSearch").css("visibility", "hidden");
+        });
+
+        $("#imgSettingClose").click(function () {
+            $(".inner").stop().animate({ left: -width }, 500);
+            $("#imgSetting").css("visibility", "visible");
+            $("#imgSearch").css("visibility", "visible");
+        });
+
+        var widthSearch = $(".innerSearch").width();
         widthSearch = widthSearch - 46;
-    $("#imgSearch").click(function(){ 
-        $(".innerSearch").stop().animate({left:0},1000); 
-        $("#imgSearch").css("visibility", "hidden");
-        $("#imgSetting").css("visibility", "hidden");
-    }); 
-    
-    $("#imgSearchClose").click(function(){
-        $(".innerSearch").stop().animate({left:-widthSearch},500);
-        $("#imgSetting").css("visibility", "visible");
-        $("#imgSearch").css("visibility", "visible");
-    });       
-       
-});
+        $("#imgSearch").click(function () {
+            $(".innerSearch").stop().animate({ left: 0 }, 1000);
+            $("#imgSearch").css("visibility", "hidden");
+            $("#imgSetting").css("visibility", "hidden");
+        });
+
+        $("#imgSearchClose").click(function () {
+            $(".innerSearch").stop().animate({ left: -widthSearch }, 500);
+            $("#imgSetting").css("visibility", "visible");
+            $("#imgSearch").css("visibility", "visible");
+        });
+
+    });
 </script>
 <style type="text/css">
 
@@ -134,72 +134,129 @@ $(document).ready(function(){
 
  
     <br />
-    <table width="100%">
-        <tr>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>President:</b>
-                <br />
-                <br />
-                Jacob Nelson<br />
-                Mobile: 55754589<br />
-                jacnel@sify.com
-            </td>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>General Secretary:</b>
-                <br />
-                <br />
-                Manoj E.K<br />
-                Mobile: 77396737<br />
-                manojek@gmail.com
-            </td>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>Treasurer:</b>
-                <br />
-                <br />
-                Saheer Javad
-                <br />
-                Mobile: 66759044<br />
-                saheerj@hotmail.com
-            </td>
-        </tr>
-    </table>
-    <br />
-    <br />
-    <br />
   <table width="100%">
         <tr>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>Joint Secretary:</b>
-                <br />
-                <br />
-                Sanil Vellarakkad<br />
-                Mobile: 33120089<br />
-                sanilkutty@hotmail.com
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/noushad.jpg" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">President</span> <br />
+                <span class="officeName"">Noushadali K M</span><br />
+                <span class="officeDetail"">Mobile: 66482972<br />
+                noushadalikm@gmail.com</span></div></td></tr>
+                </table>
             </td>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>Secretary - Sports:</b>
-                <br />
-                <br />
-                Mujeeb Ahmed V<br />
-                Mobile: 33385752<br />
-                mujeebv@gmail.com
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/vivek.jpg" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Secretary</span> <br />
+                <span class="officeName"">Vivek Vijayan N</span><br />
+                <span class="officeDetail"">Mobile: 33616033<br />
+                vivekvijayan.n@gmail.com</span></div></td></tr>
+                </table>
             </td>
-            <td style="width: 33%; vertical-align: top; padding-left: 100px">
-                <b>Secretary - Cultural:</b>
-                <br />
-                <br />
-                Aysha Vadakkayil
-                <br />
-                Mobile: 77858991<br />
-                ayshav.ar@gmail.com
+            <td style="width: 34%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/afeef.jpg" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Treasurer</span> <br />
+                <span class="officeName"">Afeef Abdurahiman</span><br />
+                <span class="officeDetail"">Mobile: 50191742<br />
+                afeef.ar@gmail.com</span></div></td></tr>
+                </table>
+            </td>
+        </tr>  
+        <tr>
+        <td colspan="3" style="padding-left:0px"><div class="hr"> 
+        </div></td>
+        </tr>          
+    </table> 
+
+    <table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align:top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/swaraj.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Cultural Secretary</span> <br />
+                <span class="officeName"">Swaraj Rajan</span><br />
+                <span class="officeDetail"">Mobile: 77735838<br />
+                swarajrajan@yahoo.com</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align:top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/rinsha.jpg" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Assistant Cultural Secretary</span> <br />
+                <span class="officeName"">Rinsha Afeef</span><br />
+                <span class="officeDetail"">Mobile: 50212017<br />
+                rinshamohamed@gmail.com</span></div></td></tr>
+                </table>
+            </td>
+        </tr>        
+    </table>
+<table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align: top;" align="right">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/mujeeb.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Sports Secretary</span> <br />
+                <span class="officeName"">Mujeeb Ahmed V</span><br />
+                <span class="officeDetail"">Mobile: 33385752<br />
+                mujeebv@gmail.com</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 50%; vertical-align: top;" align="left">
+                <table width="90%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/prasoon.jpg" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">Assistant Sports Secretary</span> <br />
+                <span class="officeName"">Prasoon Raj</span><br />
+                <span class="officeDetail"">Mobile: 30606245<br />
+                raj.prasoon@gmail.com</span></div></td></tr>
+                </table>
             </td>
         </tr>
+        <tr>
+        <td colspan="2" style="padding-left:0px"><div class="hr"> 
+        </div></td>
+        </tr>        
     </table>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br /> 
+
+  <table width="100%">
+        <tr>
+            <td style="width: 33%; vertical-align: top;">&nbsp;
+            </td>
+            <td style="width: 33%; vertical-align: top;">
+                <table width="100%" border="0">
+                <tr><td style="width:80px"><img src="images/officials/80-100/kevin.gif" alt=""/></td>
+                <td style="width:400px;text-align:left;
+                vertical-align:top;"><div style="background:#E9E7DA;height:100px;">
+                <span class="officeTitle">EF Representative</span> <br />
+                <span class="officeName"">Kevin Sam</span><br />
+                <span class="officeDetail"">Mobile:  66499072<br />
+                kevthomsam@gmail.com</span></div></td></tr>
+                </table>
+            </td>
+            <td style="width: 34%; vertical-align: top;">&nbsp;
+            </td>
+        </tr>  
+        <tr>
+        <td colspan="3" style="padding-left:0px"><div class="hr"> 
+        </div></td>
+        </tr>          
+    </table> 
+ 
  
 
                     
